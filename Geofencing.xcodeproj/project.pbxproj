@@ -7,23 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A985FE416B3CD754FBD8851C /* Pods_Geofencing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */; };
 		C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3D5242A041D009D8108 /* AppDelegate.swift */; };
-		C1F6C3D8242A041D009D8108 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3D7242A041D009D8108 /* SceneDelegate.swift */; };
-		C1F6C3DA242A041D009D8108 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3D9242A041D009D8108 /* ViewController.swift */; };
-		C1F6C3DD242A041D009D8108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F6C3DB242A041D009D8108 /* Main.storyboard */; };
 		C1F6C3DF242A0421009D8108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F6C3DE242A0421009D8108 /* Assets.xcassets */; };
 		C1F6C3E2242A0421009D8108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F6C3E0242A0421009D8108 /* LaunchScreen.storyboard */; };
+		C1F6C408242A0598009D8108 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F2242A0597009D8108 /* ActivityIndicator.swift */; };
+		C1F6C409242A0598009D8108 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F4242A0597009D8108 /* UIImageView+Extension.swift */; };
+		C1F6C40A242A0598009D8108 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F5242A0597009D8108 /* UIFont+Extension.swift */; };
+		C1F6C40B242A0598009D8108 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F6242A0597009D8108 /* UIColor+Extension.swift */; };
+		C1F6C40C242A0598009D8108 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F7242A0597009D8108 /* UILabel+Extension.swift */; };
+		C1F6C40D242A0598009D8108 /* Thread+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F8242A0597009D8108 /* Thread+Extension.swift */; };
+		C1F6C40E242A0598009D8108 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3F9242A0597009D8108 /* UIButton+Extension.swift */; };
+		C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FA242A0597009D8108 /* ObservableType+Extension.swift */; };
+		C1F6C410242A0598009D8108 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FB242A0597009D8108 /* UIView+Extension.swift */; };
+		C1F6C411242A0598009D8108 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FC242A0597009D8108 /* UIImage+Extension.swift */; };
+		C1F6C412242A0598009D8108 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FD242A0598009D8108 /* UIViewController+Extension.swift */; };
+		C1F6C413242A0598009D8108 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FE242A0598009D8108 /* UIScreen+Extension.swift */; };
+		C1F6C414242A0598009D8108 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3FF242A0598009D8108 /* Bool+Extension.swift */; };
+		C1F6C415242A0598009D8108 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C400242A0598009D8108 /* UIStackView+Extension.swift */; };
+		C1F6C416242A0598009D8108 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C401242A0598009D8108 /* UIScrollView+Extension.swift */; };
+		C1F6C417242A0598009D8108 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C402242A0598009D8108 /* CGSize+Extension.swift */; };
+		C1F6C418242A0598009D8108 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C403242A0598009D8108 /* UITextField+Extension.swift */; };
+		C1F6C419242A0598009D8108 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C405242A0598009D8108 /* UIButton+Rx.swift */; };
+		C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */; };
+		C1F6C41B242A0598009D8108 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C407242A0598009D8108 /* Array+Extension.swift */; };
+		C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41C242A0846009D8108 /* Coordinator.swift */; };
+		C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41E242A08CC009D8108 /* MapViewController.swift */; };
+		C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C420242A0933009D8108 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.release.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.release.xcconfig"; sourceTree = "<group>"; };
+		58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofencing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.debug.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F6C3D2242A041D009D8108 /* Geofencing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geofencing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F6C3D5242A041D009D8108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1F6C3D7242A041D009D8108 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C1F6C3D9242A041D009D8108 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C1F6C3DC242A041D009D8108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1F6C3DE242A0421009D8108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1F6C3E1242A0421009D8108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1F6C3E3242A0421009D8108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F6C3F2242A0597009D8108 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		C1F6C3F4242A0597009D8108 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3F5242A0597009D8108 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3F6242A0597009D8108 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3F7242A0597009D8108 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3F8242A0597009D8108 /* Thread+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3F9242A0597009D8108 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FA242A0597009D8108 /* ObservableType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FB242A0597009D8108 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FC242A0597009D8108 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FD242A0598009D8108 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FE242A0598009D8108 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C3FF242A0598009D8108 /* Bool+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C400242A0598009D8108 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C401242A0598009D8108 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C402242A0598009D8108 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C403242A0598009D8108 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C405242A0598009D8108 /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
+		C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C407242A0598009D8108 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		C1F6C41C242A0846009D8108 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C1F6C41E242A08CC009D8108 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C1F6C420242A0933009D8108 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A985FE416B3CD754FBD8851C /* Pods_Geofencing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C7C7A5F96845845CA015602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1F6C3C9242A041D009D8108 = {
 			isa = PBXGroup;
 			children = (
 				C1F6C3D4242A041D009D8108 /* Geofencing */,
 				C1F6C3D3242A041D009D8108 /* Products */,
+				F1F3F8053F6CF23FC1A6CB9B /* Pods */,
+				6C7C7A5F96845845CA015602 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +111,133 @@
 		C1F6C3D4242A041D009D8108 /* Geofencing */ = {
 			isa = PBXGroup;
 			children = (
-				C1F6C3D5242A041D009D8108 /* AppDelegate.swift */,
-				C1F6C3D7242A041D009D8108 /* SceneDelegate.swift */,
-				C1F6C3D9242A041D009D8108 /* ViewController.swift */,
-				C1F6C3DB242A041D009D8108 /* Main.storyboard */,
-				C1F6C3DE242A0421009D8108 /* Assets.xcassets */,
-				C1F6C3E0242A0421009D8108 /* LaunchScreen.storyboard */,
+				C1F6C3EA242A04F9009D8108 /* Services */,
+				C1F6C3EB242A0506009D8108 /* Networking */,
+				C1F6C3EC242A0512009D8108 /* Coordinator */,
+				C1F6C3ED242A051E009D8108 /* Models */,
+				C1F6C3EE242A0525009D8108 /* ViewModels */,
+				C1F6C3EF242A052E009D8108 /* Views */,
+				C1F6C3E9242A04B0009D8108 /* Supporting Files */,
+				C1F6C3F0242A0597009D8108 /* Library */,
 				C1F6C3E3242A0421009D8108 /* Info.plist */,
 			);
 			path = Geofencing;
+			sourceTree = "<group>";
+		};
+		C1F6C3E9242A04B0009D8108 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C3D5242A041D009D8108 /* AppDelegate.swift */,
+				C1F6C3E0242A0421009D8108 /* LaunchScreen.storyboard */,
+				C1F6C3DE242A0421009D8108 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1F6C3EA242A04F9009D8108 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1F6C3EB242A0506009D8108 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C1F6C3EC242A0512009D8108 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C41C242A0846009D8108 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C1F6C3ED242A051E009D8108 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1F6C3EE242A0525009D8108 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C420242A0933009D8108 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C1F6C3EF242A052E009D8108 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C41E242A08CC009D8108 /* MapViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1F6C3F0242A0597009D8108 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C3F1242A0597009D8108 /* Snippets */,
+				C1F6C3F3242A0597009D8108 /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C1F6C3F1242A0597009D8108 /* Snippets */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C3F2242A0597009D8108 /* ActivityIndicator.swift */,
+			);
+			path = Snippets;
+			sourceTree = "<group>";
+		};
+		C1F6C3F3242A0597009D8108 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C3F4242A0597009D8108 /* UIImageView+Extension.swift */,
+				C1F6C3F5242A0597009D8108 /* UIFont+Extension.swift */,
+				C1F6C3F6242A0597009D8108 /* UIColor+Extension.swift */,
+				C1F6C3F7242A0597009D8108 /* UILabel+Extension.swift */,
+				C1F6C3F8242A0597009D8108 /* Thread+Extension.swift */,
+				C1F6C3F9242A0597009D8108 /* UIButton+Extension.swift */,
+				C1F6C3FA242A0597009D8108 /* ObservableType+Extension.swift */,
+				C1F6C3FB242A0597009D8108 /* UIView+Extension.swift */,
+				C1F6C3FC242A0597009D8108 /* UIImage+Extension.swift */,
+				C1F6C3FD242A0598009D8108 /* UIViewController+Extension.swift */,
+				C1F6C3FE242A0598009D8108 /* UIScreen+Extension.swift */,
+				C1F6C3FF242A0598009D8108 /* Bool+Extension.swift */,
+				C1F6C400242A0598009D8108 /* UIStackView+Extension.swift */,
+				C1F6C401242A0598009D8108 /* UIScrollView+Extension.swift */,
+				C1F6C402242A0598009D8108 /* CGSize+Extension.swift */,
+				C1F6C403242A0598009D8108 /* UITextField+Extension.swift */,
+				C1F6C404242A0598009D8108 /* Rx */,
+				C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */,
+				C1F6C407242A0598009D8108 /* Array+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1F6C404242A0598009D8108 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C405242A0598009D8108 /* UIButton+Rx.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		F1F3F8053F6CF23FC1A6CB9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */,
+				4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1F6C3E6242A0421009D8108 /* Build configuration list for PBXNativeTarget "Geofencing" */;
 			buildPhases = (
+				F46740C1699293C1DDC4D07B /* [CP] Check Pods Manifest.lock */,
 				C1F6C3CE242A041D009D8108 /* Sources */,
 				C1F6C3CF242A041D009D8108 /* Frameworks */,
 				C1F6C3D0242A041D009D8108 /* Resources */,
+				66AD4DE00548BEEE49B4663B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +302,88 @@
 			files = (
 				C1F6C3E2242A0421009D8108 /* LaunchScreen.storyboard in Resources */,
 				C1F6C3DF242A0421009D8108 /* Assets.xcassets in Resources */,
-				C1F6C3DD242A041D009D8108 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66AD4DE00548BEEE49B4663B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geofencing/Pods-Geofencing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geofencing/Pods-Geofencing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Geofencing/Pods-Geofencing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46740C1699293C1DDC4D07B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geofencing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1F6C3CE242A041D009D8108 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F6C3DA242A041D009D8108 /* ViewController.swift in Sources */,
+				C1F6C411242A0598009D8108 /* UIImage+Extension.swift in Sources */,
+				C1F6C40C242A0598009D8108 /* UILabel+Extension.swift in Sources */,
+				C1F6C40B242A0598009D8108 /* UIColor+Extension.swift in Sources */,
+				C1F6C414242A0598009D8108 /* Bool+Extension.swift in Sources */,
+				C1F6C40A242A0598009D8108 /* UIFont+Extension.swift in Sources */,
+				C1F6C418242A0598009D8108 /* UITextField+Extension.swift in Sources */,
+				C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */,
+				C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */,
+				C1F6C412242A0598009D8108 /* UIViewController+Extension.swift in Sources */,
+				C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */,
+				C1F6C40E242A0598009D8108 /* UIButton+Extension.swift in Sources */,
+				C1F6C415242A0598009D8108 /* UIStackView+Extension.swift in Sources */,
+				C1F6C409242A0598009D8108 /* UIImageView+Extension.swift in Sources */,
+				C1F6C408242A0598009D8108 /* ActivityIndicator.swift in Sources */,
+				C1F6C410242A0598009D8108 /* UIView+Extension.swift in Sources */,
+				C1F6C41B242A0598009D8108 /* Array+Extension.swift in Sources */,
+				C1F6C40D242A0598009D8108 /* Thread+Extension.swift in Sources */,
+				C1F6C417242A0598009D8108 /* CGSize+Extension.swift in Sources */,
+				C1F6C419242A0598009D8108 /* UIButton+Rx.swift in Sources */,
+				C1F6C416242A0598009D8108 /* UIScrollView+Extension.swift in Sources */,
+				C1F6C413242A0598009D8108 /* UIScreen+Extension.swift in Sources */,
 				C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */,
-				C1F6C3D8242A041D009D8108 /* SceneDelegate.swift in Sources */,
+				C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */,
+				C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C1F6C3DB242A041D009D8108 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C1F6C3DC242A041D009D8108 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C1F6C3E0242A0421009D8108 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +511,7 @@
 		};
 		C1F6C3E7242A0421009D8108 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +530,7 @@
 		};
 		C1F6C3E8242A0421009D8108 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

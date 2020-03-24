@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41C242A0846009D8108 /* Coordinator.swift */; };
 		C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41E242A08CC009D8108 /* MapViewController.swift */; };
 		C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C420242A0933009D8108 /* MapViewModel.swift */; };
+		C1F6C42E242A6389009D8108 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C42B242A6389009D8108 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		C1F6C41C242A0846009D8108 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C1F6C41E242A08CC009D8108 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C1F6C420242A0933009D8108 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		C1F6C42B242A6389009D8108 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje po najboljem kvartu.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		C1F6C3D4242A041D009D8108 /* Geofencing */ = {
 			isa = PBXGroup;
 			children = (
+				C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */,
 				C1F6C3EA242A04F9009D8108 /* Services */,
 				C1F6C3EB242A0506009D8108 /* Networking */,
 				C1F6C3EC242A0512009D8108 /* Coordinator */,
@@ -137,6 +141,7 @@
 		C1F6C3EA242A04F9009D8108 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C1F6C428242A6389009D8108 /* Managers */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,13 +235,20 @@
 			path = Rx;
 			sourceTree = "<group>";
 		};
+		C1F6C428242A6389009D8108 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C42B242A6389009D8108 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F1F3F8053F6CF23FC1A6CB9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */,
 				4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -378,6 +390,7 @@
 				C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */,
 				C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */,
 				C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */,
+				C1F6C42E242A6389009D8108 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

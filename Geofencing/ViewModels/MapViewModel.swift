@@ -11,4 +11,5 @@ import Foundation
 class MapViewModel {
     
     init() {}
+    
 }

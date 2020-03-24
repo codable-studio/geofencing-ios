@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = newWindow
         Coordinator.shared.start(newWindow)
         self.window?.makeKeyAndVisible()
+        LocationManager.shared.locationManager.requestWhenInUseAuthorization()
         return true
     }
 }

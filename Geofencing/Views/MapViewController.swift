@@ -15,18 +15,17 @@ class MapViewController: UIViewController {
     private let mapViewModel: MapViewModel
     private let disposeBag = DisposeBag()
     
-    private let segmentedControl = UISegmentedControl()
-    
-    let points = [CLLocationCoordinate2D(latitude: 45.7974, longitude: 15.9137),
-    CLLocationCoordinate2D(latitude: 45.7970, longitude: 15.9142),
-    CLLocationCoordinate2D(latitude: 45.7973, longitude: 15.9146),
-    CLLocationCoordinate2D(latitude: 45.7976, longitude: 15.9142),
-    CLLocationCoordinate2D(latitude: 45.7981, longitude: 15.9134)]
+    private let placeNetworking: PlaceNetworkingMock
     
     private let mapView = MKMapView()
     
-    init(mapViewModel: MapViewModel) {
+    private let segmentedControl = UISegmentedControl()
+    
+    init(mapViewModel: MapViewModel,
+         placeNetworking: PlaceNetworkingMock) {
         self.mapViewModel = mapViewModel
+        self.placeNetworking = placeNetworking
+        PlaceManager.shared.allPlaces = placeNetworking.fetchAllPlacesFromServer()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,7 +38,7 @@ class MapViewController: UIViewController {
         render()
         setUpObservables()
         setUpMapView()
-        createCustomPolygonShapeOnMap(from: points)
+        createCustomPolygonShapesOnMap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,9 +73,11 @@ class MapViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    private func createCustomPolygonShapeOnMap(from points: [CLLocationCoordinate2D]) {
-        let polygon = MKPolygon(coordinates: points, count: points.count)
-        mapView.addOverlay(polygon)
+    private func createCustomPolygonShapesOnMap() {
+        let places = placeNetworking.fetchAllPlacesFromServer()
+        for place in places {
+            mapView.addOverlay(place.polygon)
+        }
     }
 }
 
@@ -115,18 +116,5 @@ extension MapViewController: MKMapViewDelegate {
             return polygonView
         }
         return MKPolylineRenderer(overlay: overlay)
-    }
-}
-
-extension MKPolygon {
-    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
-        let polygonRenderer = MKPolygonRenderer(polygon: self)
-        let currentMapPoint: MKMapPoint = MKMapPoint(coordinate)
-        let polygonViewPoint: CGPoint = polygonRenderer.point(for: currentMapPoint)
-        if polygonRenderer.path == nil {
-          return false
-        } else {
-          return polygonRenderer.path.contains(polygonViewPoint)
-        }
     }
 }

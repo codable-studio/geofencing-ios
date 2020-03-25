@@ -16,11 +16,7 @@ class LocationManager: NSObject {
     
     let locationManager = CLLocationManager()
     
-    let points = [CLLocationCoordinate2D(latitude: 45.7974, longitude: 15.9137),
-    CLLocationCoordinate2D(latitude: 45.7970, longitude: 15.9142),
-    CLLocationCoordinate2D(latitude: 45.7973, longitude: 15.9146),
-    CLLocationCoordinate2D(latitude: 45.7976, longitude: 15.9142),
-    CLLocationCoordinate2D(latitude: 45.7981, longitude: 15.9134)]
+    let allPlaces = PlaceManager.shared.allPlaces
     
     override init() {
         super.init()
@@ -29,23 +25,23 @@ class LocationManager: NSObject {
         locationManager.startUpdatingLocation()
     }
     
-    private func checkIfLocationIsInsidePolygon(location: CLLocationCoordinate2D) -> Bool {
-        let polygon = MKPolygon(coordinates: points, count: points.count)
-        if polygon.contains(coordinate: location) {
-            return true
-        } else {
-            return false
+    private func checkIfLocationIsInsideOneOfPolygons(location: CLLocationCoordinate2D) -> Place? {
+        var polygonPlace: Place?
+        for place in allPlaces {
+            if place.polygon.contains(coordinate: location) {
+                polygonPlace = place
+            }
         }
+        return polygonPlace
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if checkIfLocationIsInsidePolygon(location: locations.last!.coordinate) {
-            print("💚INSIDE POLYGON💚")
-        } else {
-            print("💔OUTSIDE POLYGON💔")
+        guard let lastLocationCoordinates = locations.last?.coordinate else { return }
+        guard let placeVisited = checkIfLocationIsInsideOneOfPolygons(location: lastLocationCoordinates) else {
+            return
         }
-        print("🐝🐝🐝🐝\(locations.last!.coordinate)🐝🐝🐝🐝")
+        print("💚💚💚\(placeVisited.name)💚💚💚")
     }
 }

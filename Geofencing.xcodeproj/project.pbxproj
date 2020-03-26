@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A985FE416B3CD754FBD8851C /* Pods_Geofencing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */; };
+		C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */; };
+		C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */; };
+		C19C4256242B79060086BA46 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4255242B79060086BA46 /* Place.swift */; };
+		C19C4258242B7A7F0086BA46 /* GeofencingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4257242B7A7F0086BA46 /* GeofencingError.swift */; };
+		C19C425B242B7B9D0086BA46 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */; };
+		C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4262242BA04D0086BA46 /* PlaceNetworkingMock.swift */; };
+		C19C4266242BB1400086BA46 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4265242BB1400086BA46 /* PlaceManager.swift */; };
 		C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3D5242A041D009D8108 /* AppDelegate.swift */; };
 		C1F6C3DF242A0421009D8108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F6C3DE242A0421009D8108 /* Assets.xcassets */; };
 		C1F6C3E2242A0421009D8108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F6C3E0242A0421009D8108 /* LaunchScreen.storyboard */; };
@@ -41,6 +48,15 @@
 		4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.release.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.release.xcconfig"; sourceTree = "<group>"; };
 		58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofencing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.debug.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.debug.xcconfig"; sourceTree = "<group>"; };
+		C19C424F242B75920086BA46 /* Hodanje po najbolje kvartu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hodanje po najbolje kvartu.gpx"; sourceTree = "<group>"; };
+		C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPolygon+Extension.swift"; sourceTree = "<group>"; };
+		C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServerResponse.swift; sourceTree = "<group>"; };
+		C19C4255242B79060086BA46 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C19C4257242B7A7F0086BA46 /* GeofencingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingError.swift; sourceTree = "<group>"; };
+		C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
+		C19C4262242BA04D0086BA46 /* PlaceNetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworkingMock.swift; sourceTree = "<group>"; };
+		C19C4264242BA8AF0086BA46 /* Trcanje dubai-zuza-vivas.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje dubai-zuza-vivas.gpx"; sourceTree = "<group>"; };
+		C19C4265242BB1400086BA46 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
 		C1F6C3D2242A041D009D8108 /* Geofencing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geofencing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F6C3D5242A041D009D8108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1F6C3DE242A0421009D8108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +109,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C19C4250242B77350086BA46 /* GPX testing files */ = {
+			isa = PBXGroup;
+			children = (
+				C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */,
+				C19C424F242B75920086BA46 /* Hodanje po najbolje kvartu.gpx */,
+				C19C4264242BA8AF0086BA46 /* Trcanje dubai-zuza-vivas.gpx */,
+			);
+			path = "GPX testing files";
+			sourceTree = "<group>";
+		};
+		C19C4259242B7B7D0086BA46 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		C19C425E242B7CCD0086BA46 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */,
+				C19C4255242B79060086BA46 /* Place.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		C19C425F242B7CFC0086BA46 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C19C4257242B7A7F0086BA46 /* GeofencingError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		C1F6C3C9242A041D009D8108 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +165,7 @@
 		C1F6C3D4242A041D009D8108 /* Geofencing */ = {
 			isa = PBXGroup;
 			children = (
-				C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */,
+				C19C4250242B77350086BA46 /* GPX testing files */,
 				C1F6C3EA242A04F9009D8108 /* Services */,
 				C1F6C3EB242A0506009D8108 /* Networking */,
 				C1F6C3EC242A0512009D8108 /* Coordinator */,
@@ -141,6 +192,7 @@
 		C1F6C3EA242A04F9009D8108 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C19C4259242B7B7D0086BA46 /* Factories */,
 				C1F6C428242A6389009D8108 /* Managers */,
 			);
 			path = Services;
@@ -149,6 +201,7 @@
 		C1F6C3EB242A0506009D8108 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C19C4262242BA04D0086BA46 /* PlaceNetworkingMock.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -164,6 +217,8 @@
 		C1F6C3ED242A051E009D8108 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C19C425F242B7CFC0086BA46 /* Errors */,
+				C19C425E242B7CCD0086BA46 /* Place */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,9 +275,10 @@
 				C1F6C401242A0598009D8108 /* UIScrollView+Extension.swift */,
 				C1F6C402242A0598009D8108 /* CGSize+Extension.swift */,
 				C1F6C403242A0598009D8108 /* UITextField+Extension.swift */,
-				C1F6C404242A0598009D8108 /* Rx */,
 				C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */,
 				C1F6C407242A0598009D8108 /* Array+Extension.swift */,
+				C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */,
+				C1F6C404242A0598009D8108 /* Rx */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				C1F6C42B242A6389009D8108 /* LocationManager.swift */,
+				C19C4265242BB1400086BA46 /* PlaceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -374,9 +431,14 @@
 				C1F6C418242A0598009D8108 /* UITextField+Extension.swift in Sources */,
 				C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */,
 				C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */,
+				C19C425B242B7B9D0086BA46 /* PlaceFactory.swift in Sources */,
+				C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */,
+				C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */,
 				C1F6C412242A0598009D8108 /* UIViewController+Extension.swift in Sources */,
 				C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */,
+				C19C4266242BB1400086BA46 /* PlaceManager.swift in Sources */,
 				C1F6C40E242A0598009D8108 /* UIButton+Extension.swift in Sources */,
+				C19C4258242B7A7F0086BA46 /* GeofencingError.swift in Sources */,
 				C1F6C415242A0598009D8108 /* UIStackView+Extension.swift in Sources */,
 				C1F6C409242A0598009D8108 /* UIImageView+Extension.swift in Sources */,
 				C1F6C408242A0598009D8108 /* ActivityIndicator.swift in Sources */,
@@ -384,9 +446,11 @@
 				C1F6C41B242A0598009D8108 /* Array+Extension.swift in Sources */,
 				C1F6C40D242A0598009D8108 /* Thread+Extension.swift in Sources */,
 				C1F6C417242A0598009D8108 /* CGSize+Extension.swift in Sources */,
+				C19C4256242B79060086BA46 /* Place.swift in Sources */,
 				C1F6C419242A0598009D8108 /* UIButton+Rx.swift in Sources */,
 				C1F6C416242A0598009D8108 /* UIScrollView+Extension.swift in Sources */,
 				C1F6C413242A0598009D8108 /* UIScreen+Extension.swift in Sources */,
+				C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */,
 				C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */,
 				C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */,
 				C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */,

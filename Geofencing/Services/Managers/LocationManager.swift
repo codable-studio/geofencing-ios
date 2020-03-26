@@ -11,12 +11,12 @@ import CoreLocation
 import MapKit
 
 class LocationManager: NSObject {
-    
+
     static var shared = LocationManager()
     
     let locationManager = CLLocationManager()
     
-    let allPlaces = PlaceManager.shared.allPlaces
+    //let allPlaces = PlaceManager.shared.allPlaces
     
     override init() {
         super.init()
@@ -27,7 +27,7 @@ class LocationManager: NSObject {
     
     private func checkIfLocationIsInsideOneOfPolygons(location: CLLocationCoordinate2D) -> Place? {
         var polygonPlace: Place?
-        for place in allPlaces {
+        for place in PlaceManager.shared.allPlaces {
             if place.polygon.contains(coordinate: location) {
                 polygonPlace = place
             }

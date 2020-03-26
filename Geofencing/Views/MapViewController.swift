@@ -15,29 +15,28 @@ class MapViewController: UIViewController {
     private let mapViewModel: MapViewModel
     private let disposeBag = DisposeBag()
     
-    private let placeNetworking: PlaceNetworkingMock
-    
     private let mapView = MKMapView()
-    
     private let segmentedControl = UISegmentedControl()
     
-    init(mapViewModel: MapViewModel,
-         placeNetworking: PlaceNetworkingMock) {
+    private var allPlaces = [Place]()
+    
+    private let mapViewControllerStarted = PublishSubject<Void>()
+    
+    init(mapViewModel: MapViewModel) {
         self.mapViewModel = mapViewModel
-        self.placeNetworking = placeNetworking
-        PlaceManager.shared.allPlaces = placeNetworking.fetchAllPlacesFromServer()
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         render()
         setUpObservables()
         setUpMapView()
+        mapViewControllerStarted.onNext(())
         createCustomPolygonShapesOnMap()
     }
     
@@ -62,6 +61,17 @@ class MapViewController: UIViewController {
                     self.mapView.mapType = .satellite
                 }
             }).disposed(by: disposeBag)
+        
+        mapViewControllerStarted.bind(to: mapViewModel.mapViewControllerStarted)
+            .disposed(by: disposeBag)
+        
+        mapViewModel.placeFetchingResponse
+            .subscribe(onNext: { [weak self] places in
+                guard let `self` = self else { return }
+                self.allPlaces = places
+                PlaceManager.shared.allPlaces = places
+                print("❌❌❌❌❌Broj mjesta:\(self.allPlaces.count)❌❌❌❌❌")
+            }).disposed(by: disposeBag)
     }
     
     private func setUpMapView() {
@@ -74,8 +84,7 @@ class MapViewController: UIViewController {
     }
     
     private func createCustomPolygonShapesOnMap() {
-        let places = placeNetworking.fetchAllPlacesFromServer()
-        for place in places {
+        for place in allPlaces {
             mapView.addOverlay(place.polygon)
         }
     }

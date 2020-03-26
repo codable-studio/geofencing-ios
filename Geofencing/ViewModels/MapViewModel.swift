@@ -7,9 +7,30 @@
 //
 
 import Foundation
+import RxSwift
 
 class MapViewModel {
     
-    init() {}
+    private let disposeBag = DisposeBag()
+    
+    private let placeNetworking: PlaceNetworkingProtocol
+    
+    var mapViewControllerStarted = PublishSubject<Void>()
+    
+    var placeFetchingResponse: Observable<[Place]>!
+    
+    
+    init(placeNetworking: PlaceNetworkingProtocol) {
+        self.placeNetworking = placeNetworking
+        setUpObservables()
+    }
+    
+    private func setUpObservables() {
+        placeFetchingResponse = mapViewControllerStarted
+            .flatMapLatest({ [weak self] _ -> Observable<[Place]> in
+                guard let `self` = self else { return Observable.empty() }
+                return Observable.just(self.placeNetworking.fetchAllPlacesFromServer())
+            })
+    }
     
 }

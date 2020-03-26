@@ -10,16 +10,15 @@ import Foundation
 import MapKit
 
 class Place {
-    
     let name: String
     let description: String
     let sightType: String
-    let polygonCoordinates: MKPolygon
+    let polygon: MKPolygon
     
-    init(name: String, description: String, sightType: String, polygonCoordinates: MKPolygon) {
+    init(name: String, description: String, sightType: String, polygon: MKPolygon) {
         self.name = name
         self.description = description
         self.sightType = sightType
-        self.polygonCoordinates = polygonCoordinates
+        self.polygon = polygon
     }
 }

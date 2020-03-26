@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class PlaceManager {
+    
+    static var shared = PlaceManager()
+    
+    var allPlaces = [Place]()
+}

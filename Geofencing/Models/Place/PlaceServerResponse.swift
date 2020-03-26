@@ -1,5 +1,5 @@
 //
-//  PlaceServerResponse.swift
+//  PlaceFetchingResponse.swift
 //  Geofencing
 //
 //  Created by Krešimir Baković on 25/03/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PlaceServerResponse {
-    case success()
-    case error()
+enum PlaceFetchingResponse {
+    case success(Place)
+    case error(GeofencingError)
 }

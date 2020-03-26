@@ -12,7 +12,7 @@ import RxSwift
 
 class MapViewController: UIViewController {
     
-    private let mapViewModel: MapViewModel
+    private let mapViewModel: MapViewModelProtocol
     private let disposeBag = DisposeBag()
     
     private let mapView = MKMapView()
@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
     
     private let mapViewControllerStarted = PublishSubject<Void>()
     
-    init(mapViewModel: MapViewModel) {
+    init(mapViewModel: MapViewModelProtocol) {
         self.mapViewModel = mapViewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,7 +36,6 @@ class MapViewController: UIViewController {
         render()
         setUpObservables()
         setUpMapView()
-        mapViewControllerStarted.onNext(())
         createCustomPolygonShapesOnMap()
     }
     
@@ -62,15 +61,11 @@ class MapViewController: UIViewController {
                 }
             }).disposed(by: disposeBag)
         
-        mapViewControllerStarted.bind(to: mapViewModel.mapViewControllerStarted)
-            .disposed(by: disposeBag)
-        
         mapViewModel.placeFetchingResponse
             .subscribe(onNext: { [weak self] places in
                 guard let `self` = self else { return }
                 self.allPlaces = places
                 PlaceManager.shared.allPlaces = places
-                print("❌❌❌❌❌Broj mjesta:\(self.allPlaces.count)❌❌❌❌❌")
             }).disposed(by: disposeBag)
     }
     

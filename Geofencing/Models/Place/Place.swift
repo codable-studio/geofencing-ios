@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 class Place {
+    
     let name: String
     let description: String
     let sightType: String

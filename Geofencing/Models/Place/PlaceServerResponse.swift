@@ -9,6 +9,6 @@
 import Foundation
 
 enum PlaceFetchingResponse {
-    case success(Place)
+    case success([Place])
     case error(GeofencingError)
 }

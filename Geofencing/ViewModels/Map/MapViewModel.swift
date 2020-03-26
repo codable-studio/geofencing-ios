@@ -9,16 +9,13 @@
 import Foundation
 import RxSwift
 
-class MapViewModel {
+class MapViewModel: MapViewModelProtocol {
     
     private let disposeBag = DisposeBag()
     
     private let placeNetworking: PlaceNetworkingProtocol
     
-    var mapViewControllerStarted = PublishSubject<Void>()
-    
-    var placeFetchingResponse: Observable<[Place]>!
-    
+    var placeFetchingResponse = ReplaySubject<[Place]>.create(bufferSize: 1)
     
     init(placeNetworking: PlaceNetworkingProtocol) {
         self.placeNetworking = placeNetworking
@@ -26,11 +23,10 @@ class MapViewModel {
     }
     
     private func setUpObservables() {
-        placeFetchingResponse = mapViewControllerStarted
-            .flatMapLatest({ [weak self] _ -> Observable<[Place]> in
-                guard let `self` = self else { return Observable.empty() }
-                return Observable.just(self.placeNetworking.fetchAllPlacesFromServer())
-            })
+        self.placeNetworking.fetchAllPlacesFromServer()
+            .subscribe(onNext: { [weak self] places in
+                guard let `self` = self else { return }
+                self.placeFetchingResponse.onNext(places)
+            }).disposed(by: self.disposeBag)
     }
-    
 }

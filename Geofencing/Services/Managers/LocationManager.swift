@@ -16,8 +16,6 @@ class LocationManager: NSObject {
     
     let locationManager = CLLocationManager()
     
-    //let allPlaces = PlaceManager.shared.allPlaces
-    
     override init() {
         super.init()
         locationManager.delegate = self

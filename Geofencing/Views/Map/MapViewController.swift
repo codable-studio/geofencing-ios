@@ -82,6 +82,9 @@ class MapViewController: UIViewController {
         for place in allPlaces {
             mapView.addOverlay(place.polygon)
         }
+        let cordinate = CLLocationCoordinate2D(latitude: 45.79694999999999, longitude: 15.913549999999999)
+        let a = MKCircle(center: cordinate, radius: CLLocationDistance(exactly: 48.48319118416196)!)
+        mapView.addOverlay(a)
     }
 }
 
@@ -118,6 +121,11 @@ extension MapViewController: MKMapViewDelegate {
             polygonView.fillColor = .yellow
             polygonView.lineWidth = 3
             return polygonView
+        } else if overlay is MKCircle {
+            let circle = MKCircleRenderer(overlay: overlay)
+            circle.strokeColor = .red
+            circle.lineWidth = 1
+            return circle
         }
         return MKPolylineRenderer(overlay: overlay)
     }

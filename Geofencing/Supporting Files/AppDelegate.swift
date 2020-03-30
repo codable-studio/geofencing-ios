@@ -19,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Coordinator.shared.start(newWindow)
         self.window?.makeKeyAndVisible()
         LocationManager.shared.locationManager.requestWhenInUseAuthorization()
+        NotificationManager.shared.notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if let error = error {
+                print("Error occured: \(error)")
+            } else {
+                print("NotificationCenter Authorization Granted!")
+            }
+        }
         return true
     }
 }

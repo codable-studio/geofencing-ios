@@ -12,6 +12,8 @@
 		C1039098242CCDED00E3A007 /* PlaceNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039097242CCDED00E3A007 /* PlaceNetworking.swift */; };
 		C103909A242CCE3700E3A007 /* PlaceNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */; };
 		C103909D242CE3E600E3A007 /* MapViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C103909C242CE3E600E3A007 /* MapViewModelProtocol.swift */; };
+		C11508BA2431E15C00971465 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11508B92431E15C00971465 /* Coordinator.swift */; };
+		C11508BC2431E3C000971465 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11508BB2431E3C000971465 /* NotificationManager.swift */; };
 		C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */; };
 		C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */; };
 		C19C4256242B79060086BA46 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4255242B79060086BA46 /* Place.swift */; };
@@ -42,7 +44,6 @@
 		C1F6C419242A0598009D8108 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C405242A0598009D8108 /* UIButton+Rx.swift */; };
 		C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */; };
 		C1F6C41B242A0598009D8108 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C407242A0598009D8108 /* Array+Extension.swift */; };
-		C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41C242A0846009D8108 /* Coordinator.swift */; };
 		C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41E242A08CC009D8108 /* MapViewController.swift */; };
 		C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C420242A0933009D8108 /* MapViewModel.swift */; };
 		C1F6C42E242A6389009D8108 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C42B242A6389009D8108 /* LocationManager.swift */; };
@@ -56,6 +57,8 @@
 		C1039097242CCDED00E3A007 /* PlaceNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworking.swift; sourceTree = "<group>"; };
 		C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworkingProtocol.swift; sourceTree = "<group>"; };
 		C103909C242CE3E600E3A007 /* MapViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelProtocol.swift; sourceTree = "<group>"; };
+		C11508B92431E15C00971465 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C11508BB2431E3C000971465 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		C19C424F242B75920086BA46 /* Hodanje po najbolje kvartu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hodanje po najbolje kvartu.gpx"; sourceTree = "<group>"; };
 		C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPolygon+Extension.swift"; sourceTree = "<group>"; };
 		C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServerResponse.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		C1F6C405242A0598009D8108 /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		C1F6C407242A0598009D8108 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		C1F6C41C242A0846009D8108 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C1F6C41E242A08CC009D8108 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C1F6C420242A0933009D8108 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		C1F6C42B242A6389009D8108 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -245,7 +247,7 @@
 		C1F6C3EC242A0512009D8108 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C1F6C41C242A0846009D8108 /* Coordinator.swift */,
+				C11508B92431E15C00971465 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				C1F6C42B242A6389009D8108 /* LocationManager.swift */,
+				C11508BB2431E3C000971465 /* NotificationManager.swift */,
 				C19C4265242BB1400086BA46 /* PlaceManager.swift */,
 			);
 			path = Managers;
@@ -466,8 +469,9 @@
 				C1F6C414242A0598009D8108 /* Bool+Extension.swift in Sources */,
 				C1F6C40A242A0598009D8108 /* UIFont+Extension.swift in Sources */,
 				C1F6C418242A0598009D8108 /* UITextField+Extension.swift in Sources */,
-				C1F6C41D242A0846009D8108 /* Coordinator.swift in Sources */,
 				C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */,
+				C11508BC2431E3C000971465 /* NotificationManager.swift in Sources */,
+				C11508BA2431E15C00971465 /* Coordinator.swift in Sources */,
 				C19C425B242B7B9D0086BA46 /* PlaceFactory.swift in Sources */,
 				C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */,
 				C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */,

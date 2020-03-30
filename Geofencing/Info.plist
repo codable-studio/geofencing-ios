@@ -47,5 +47,11 @@
 	<string>This app works best when you allow background location updates. Your location data never leaves the device.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app works best when you allow background location updates. Your location data never leaves the device.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

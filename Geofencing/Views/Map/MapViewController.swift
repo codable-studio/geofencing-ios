@@ -80,11 +80,12 @@ class MapViewController: UIViewController {
     
     private func createCustomPolygonShapesOnMap() {
         for place in allPlaces {
-            mapView.addOverlay(place.polygon)
+            let polygon = place.makePolygonFromCoordinates(coordinates: place.coordinates)
+            mapView.addOverlay(polygon)
+            let circularRegion = LocationManager.shared.findCenterOfPlaceAndReturnCircularAreaAroundThatPlace(place: place)
+            let circle = MKCircle(center: circularRegion.center, radius: circularRegion.radius)
+            mapView.addOverlay(circle)
         }
-        let cordinate = CLLocationCoordinate2D(latitude: 45.79694999999999, longitude: 15.913549999999999)
-        let a = MKCircle(center: cordinate, radius: CLLocationDistance(exactly: 48.48319118416196)!)
-        mapView.addOverlay(a)
     }
 }
 

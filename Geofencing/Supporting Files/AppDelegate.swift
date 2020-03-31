@@ -28,4 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        LocationManager.shared.locationManager.startUpdatingLocation()
+    }
 }

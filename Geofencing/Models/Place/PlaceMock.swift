@@ -10,7 +10,6 @@ import Foundation
 import MapKit
 
 class PlaceMock {
-    
     static let vivasCoordinates = [CLLocationCoordinate2D(latitude: 45.7976, longitude: 15.9138),
                                    CLLocationCoordinate2D(latitude: 45.7978, longitude: 15.9139),
                                    CLLocationCoordinate2D(latitude: 45.7978, longitude: 15.9138),
@@ -31,15 +30,15 @@ class PlaceMock {
     static let vivas = Place(name: "Vivas",
                              description: "Vivas je poznati kvartovski kacic.",
                              sightType: "Caffe bar",
-                             polygon: MKPolygon(coordinates: vivasCoordinates, count: vivasCoordinates.count))
+                             coordinates: vivasCoordinates)
     
     static let zuza = Place(name: "Zuza",
                             description: "Zuza je poznato kvartovsko okupljaliste.",
                             sightType: "Trg",
-                            polygon: MKPolygon(coordinates: zuzaCoordinates, count: zuzaCoordinates.count))
+                            coordinates: zuzaCoordinates)
     
     static let dubai = Place(name: "Dubai",
                              description: "Dubai je poznati park na kvartu Rudeš.",
                              sightType: "Park",
-                             polygon: MKPolygon(coordinates: dubaiCoordinates, count: dubaiCoordinates.count))
+                             coordinates: dubaiCoordinates)
 }

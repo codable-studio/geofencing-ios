@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import CoreLocation
+import MapKit
 
 class NotificationManager: NSObject {
     
@@ -18,28 +19,25 @@ class NotificationManager: NSObject {
     
     override init() {
         super.init()
-        notificationCenter.delegate = self
+        setUpNotificationManager()
         scheduleNotification()
+    }
+    
+    private func setUpNotificationManager() {
+        notificationCenter.delegate = self as? UNUserNotificationCenterDelegate
     }
     
     func scheduleNotification() {
         notificationCenter.removeAllPendingNotificationRequests()
-        let circularArea = LocationManager.shared
-            .findCenterOfCoordinatesAndReturnCircularAreaAroundThatCoordinates(coordinates: PlaceMock.zuzaCoordinates)
-        print("😡😡😡😡😡😡CENTER:\(circularArea.center)😡😡😡😡😡😡")
-        print("😡😡😡😡😡😡RADIUS:\(circularArea.radius)😡😡😡😡😡😡")
+        let zuzaCircularArea = LocationManager.shared
+            .findCenterOfPlaceAndReturnCircularAreaAroundThatPlace(place: PlaceMock.zuza)
         
-        let entranceRequest = makeLocationBasedNotificationRequest(notificationBody: "You entered area",
-                                                                   region: circularArea,
+        let entranceRequest = makeLocationBasedNotificationRequest(notificationBody: "",
+                                                                   region: zuzaCircularArea,
                                                                    notifyOnEntry: true,
                                                                    notifyOnExit: false)
-        let exitRequest = makeLocationBasedNotificationRequest(notificationBody: "You left area.",
-                                                               region: circularArea,
-                                                               notifyOnEntry: false,
-                                                               notifyOnExit: true)
 
-        notificationCenter.add(entranceRequest, withCompletionHandler: nil)
-        notificationCenter.add(exitRequest, withCompletionHandler: nil)
+        notificationCenter.add(entranceRequest)
     }
     
     func makeLocationBasedNotificationRequest(notificationBody: String,
@@ -47,23 +45,29 @@ class NotificationManager: NSObject {
                                               notifyOnEntry: Bool,
                                               notifyOnExit: Bool) -> UNNotificationRequest {
         let content = UNMutableNotificationContent()
-        content.title = "Entered📍"
-        content.body = notificationBody
+        content.title = "Location alert📍"
+        content.body = "You entered \(region.identifier)"
         content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound.default
         
         region.notifyOnEntry = notifyOnEntry
         region.notifyOnExit = notifyOnExit
         
+        LocationManager.shared.locationManager.startMonitoring(for: region)
+    
         let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "\(region.identifier)", content: content, trigger: trigger)
         return request
     }
-}
-
-extension NotificationManager: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶")
-        completionHandler([.alert, .sound])
+    
+    func sendLocationBasedNotification(locationName: String) {
+        let content = UNMutableNotificationContent()
+        content.title = "Location alert📌"
+        content.body = "You entered \(locationName)."
+        content.categoryIdentifier = "alarm"
+        content.sound = UNNotificationSound.default
+        
+        let request = UNNotificationRequest(identifier: locationName, content: content, trigger: nil)
+        NotificationManager.shared.notificationCenter.add(request)
     }
 }

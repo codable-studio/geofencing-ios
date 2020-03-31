@@ -9,17 +9,26 @@
 import Foundation
 import MapKit
 
-class Place {
+class Place: Equatable {
+    static func == (lhs: Place, rhs: Place) -> Bool {
+        lhs.name == rhs.name
+    }
+    
     
     let name: String
     let description: String
     let sightType: String
-    let polygon: MKPolygon
+    let coordinates: [CLLocationCoordinate2D]
     
-    init(name: String, description: String, sightType: String, polygon: MKPolygon) {
+    init(name: String, description: String, sightType: String, coordinates: [CLLocationCoordinate2D]) {
         self.name = name
         self.description = description
         self.sightType = sightType
-        self.polygon = polygon
+        self.coordinates = coordinates
+    }
+    
+    func makePolygonFromCoordinates(coordinates: [CLLocationCoordinate2D]) -> MKPolygon {
+        let polygon = MKPolygon(coordinates: coordinates, count: coordinates.count)
+        return polygon
     }
 }

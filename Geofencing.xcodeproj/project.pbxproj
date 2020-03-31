@@ -59,6 +59,9 @@
 		C103909C242CE3E600E3A007 /* MapViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelProtocol.swift; sourceTree = "<group>"; };
 		C11508B92431E15C00971465 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C11508BB2431E3C000971465 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		C13BBD4E2433B0B80053AF7D /* Trcanje spansko-belfast.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje spansko-belfast.gpx"; sourceTree = "<group>"; };
+		C142E338243343B4005E3284 /* Hodanje dubai-zuza-vrbaniMost.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hodanje dubai-zuza-vrbaniMost.gpx"; sourceTree = "<group>"; };
+		C142E33924334648005E3284 /* Trcanje dubai-zuza-mostVrbani.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje dubai-zuza-mostVrbani.gpx"; sourceTree = "<group>"; };
 		C19C424F242B75920086BA46 /* Hodanje po najbolje kvartu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hodanje po najbolje kvartu.gpx"; sourceTree = "<group>"; };
 		C19C4251242B77FE0086BA46 /* MKPolygon+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPolygon+Extension.swift"; sourceTree = "<group>"; };
 		C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServerResponse.swift; sourceTree = "<group>"; };
@@ -152,6 +155,9 @@
 				C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */,
 				C19C424F242B75920086BA46 /* Hodanje po najbolje kvartu.gpx */,
 				C19C4264242BA8AF0086BA46 /* Trcanje dubai-zuza-vivas.gpx */,
+				C142E338243343B4005E3284 /* Hodanje dubai-zuza-vrbaniMost.gpx */,
+				C142E33924334648005E3284 /* Trcanje dubai-zuza-mostVrbani.gpx */,
+				C13BBD4E2433B0B80053AF7D /* Trcanje spansko-belfast.gpx */,
 			);
 			path = "GPX testing files";
 			sourceTree = "<group>";

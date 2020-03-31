@@ -16,54 +16,51 @@ class LocationManager: NSObject {
     
     let locationManager = CLLocationManager()
     
+    private var lastLocation: CLLocation?
+    
     override init() {
         super.init()
+        setUpLocationManager()
+    }
+    
+    private func setUpLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.startUpdatingLocation()
     }
     
-    func makeSpecificCircularRegion(latitude: CLLocationDegrees,
-                                    longitude: CLLocationDegrees,
-                                    radius: CLLocationDistance,
-                                    notifyOnEntry: Bool,
-                                    notifyOnExit: Bool) -> CLCircularRegion {
-        let centerLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let region = CLCircularRegion(center: centerLocation, radius: radius, identifier: UUID().uuidString)
-        region.notifyOnEntry = notifyOnEntry
-        region.notifyOnExit = notifyOnExit
-        return region
-    }
-    
-    func findCenterOfCoordinatesAndReturnCircularAreaAroundThatCoordinates(coordinates: [CLLocationCoordinate2D]) -> CLCircularRegion {
+    func findCenterOfPlaceAndReturnCircularAreaAroundThatPlace(place: Place) -> CLCircularRegion {
         var sumOfLongitudes = 0.0
         var sumOfLatitudes = 0.0
-        for coordinate in coordinates {
+        for coordinate in place.coordinates {
             sumOfLongitudes += coordinate.longitude
             sumOfLatitudes += coordinate.latitude
         }
-        let centerLongitude = sumOfLongitudes / Double(coordinates.count)
-        let centerLatitude = sumOfLatitudes / Double(coordinates.count)
+        let centerLongitude = sumOfLongitudes / Double(place.coordinates.count)
+        let centerLatitude = sumOfLatitudes / Double(place.coordinates.count)
         let centerLocation = CLLocationCoordinate2D(latitude: centerLatitude, longitude: centerLongitude)
-        let regionRadius = findBiggestDistanceFromLocation(location: centerLocation, locations: coordinates)
-        let circularRegion = CLCircularRegion(center: centerLocation, radius: regionRadius, identifier: UUID().uuidString)
+        let regionRadius = findBiggestDistanceFromCenter(center: centerLocation, coordinates: place.coordinates)
+        let circularRegion = CLCircularRegion(center: centerLocation, radius: regionRadius, identifier: "\(place.name)")
         return circularRegion
     }
     
-    private func checkIfLocationIsInsideOneOfPolygons(location: CLLocationCoordinate2D) -> Place? {
-        var polygonPlace: Place?
+    private func findPlaceThatContains(location: CLLocationCoordinate2D) -> Place? {
+        var polygonPlace: Place? = nil
         for place in PlaceManager.shared.allPlaces {
-            if place.polygon.contains(coordinate: location) {
+            let polygon = place.makePolygonFromCoordinates(coordinates: place.coordinates)
+            if polygon.contains(coordinate: location) {
                 polygonPlace = place
             }
         }
         return polygonPlace
     }
     
-    private func findBiggestDistanceFromLocation(location: CLLocationCoordinate2D, locations: [CLLocationCoordinate2D]) -> Double {
+    private func findBiggestDistanceFromCenter(center: CLLocationCoordinate2D, coordinates: [CLLocationCoordinate2D]) -> Double {
         var biggestDistance = 0.0
-        for location in locations {
-            let distance = sqrt(location.longitude * location.longitude + location.latitude * location.latitude)
+        for coordinate in coordinates {
+            let distance = sqrt(coordinate.longitude * coordinate.longitude + coordinate.latitude * coordinate.latitude)
             if distance > biggestDistance {
                 biggestDistance = distance
             }
@@ -74,10 +71,12 @@ class LocationManager: NSObject {
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastLocationCoordinates = locations.last?.coordinate else { return }
-        guard let placeVisited = checkIfLocationIsInsideOneOfPolygons(location: lastLocationCoordinates) else {
-            return
+        guard let lastLocationCoordinates = locations.last?.coordinate
+             else { return }
+        let placeVisited = findPlaceThatContains(location: lastLocationCoordinates)
+        if placeVisited != findPlaceThatContains(location: lastLocation?.coordinate ?? CLLocationCoordinate2D()) && findPlaceThatContains(location: lastLocation?.coordinate ?? CLLocationCoordinate2D()) == nil {
+            NotificationManager.shared.sendLocationBasedNotification(locationName: placeVisited!.name)
         }
-        print("💚💚💚\(placeVisited.name)💚💚💚")
+        lastLocation = locations.last
     }
 }

@@ -69,6 +69,8 @@ class LocationManager: NSObject {
     }
 }
 
+
+// MARK: - CLLocationManager delegate
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocationCoordinates = locations.last?.coordinate

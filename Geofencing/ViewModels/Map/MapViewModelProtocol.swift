@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol MapViewModelProtocol {
-    var placeFetchingResponse: ReplaySubject<[Place]> { get }
+    var placeFetchingResponse: ReplaySubject<PlaceFetchingResponse> { get }
 }

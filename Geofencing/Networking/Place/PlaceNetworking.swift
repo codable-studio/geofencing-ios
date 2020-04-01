@@ -12,7 +12,7 @@ import MapKit
 
 class PlaceNetworking: PlaceNetworkingProtocol {
     
-    func fetchAllPlacesFromServer() -> Observable<[Place]> {
+    func fetchAllPlacesFromServer() -> Observable<PlaceFetchingResponse> {
         return Observable.empty()
     }
 }

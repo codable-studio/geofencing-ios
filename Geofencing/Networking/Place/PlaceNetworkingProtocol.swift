@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol PlaceNetworkingProtocol {
-    func fetchAllPlacesFromServer() -> Observable<[Place]>
+    func fetchAllPlacesFromServer() -> Observable<PlaceFetchingResponse>
 }

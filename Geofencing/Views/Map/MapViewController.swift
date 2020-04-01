@@ -62,10 +62,15 @@ class MapViewController: UIViewController {
             }).disposed(by: disposeBag)
         
         mapViewModel.placeFetchingResponse
-            .subscribe(onNext: { [weak self] places in
+            .subscribe(onNext: { [weak self] placeFetchingResponse in
                 guard let `self` = self else { return }
-                self.allPlaces = places
-                PlaceManager.shared.allPlaces = places
+                switch placeFetchingResponse {
+                case .success(let places):
+                    self.allPlaces = places
+                    PlaceManager.shared.allPlaces = places
+                case .error(let error):
+                    self.showOneOptionAlert(title: "Alert", message: "\(error.errorMessage)", actionTitle: "OK")
+                }
             }).disposed(by: disposeBag)
     }
     

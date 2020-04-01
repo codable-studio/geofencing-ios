@@ -18,7 +18,6 @@
 		C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */; };
 		C19C4256242B79060086BA46 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4255242B79060086BA46 /* Place.swift */; };
 		C19C4258242B7A7F0086BA46 /* GeofencingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4257242B7A7F0086BA46 /* GeofencingError.swift */; };
-		C19C425B242B7B9D0086BA46 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */; };
 		C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4262242BA04D0086BA46 /* PlaceNetworkingMock.swift */; };
 		C19C4266242BB1400086BA46 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4265242BB1400086BA46 /* PlaceManager.swift */; };
 		C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C3D5242A041D009D8108 /* AppDelegate.swift */; };
@@ -67,7 +66,6 @@
 		C19C4253242B78B30086BA46 /* PlaceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServerResponse.swift; sourceTree = "<group>"; };
 		C19C4255242B79060086BA46 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		C19C4257242B7A7F0086BA46 /* GeofencingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingError.swift; sourceTree = "<group>"; };
-		C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
 		C19C4262242BA04D0086BA46 /* PlaceNetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworkingMock.swift; sourceTree = "<group>"; };
 		C19C4264242BA8AF0086BA46 /* Trcanje dubai-zuza-vivas.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje dubai-zuza-vivas.gpx"; sourceTree = "<group>"; };
 		C19C4265242BB1400086BA46 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		C19C4259242B7B7D0086BA46 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				C19C425A242B7B9D0086BA46 /* PlaceFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -478,7 +475,6 @@
 				C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */,
 				C11508BC2431E3C000971465 /* NotificationManager.swift in Sources */,
 				C11508BA2431E15C00971465 /* Coordinator.swift in Sources */,
-				C19C425B242B7B9D0086BA46 /* PlaceFactory.swift in Sources */,
 				C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */,
 				C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */,
 				C1F6C412242A0598009D8108 /* UIViewController+Extension.swift in Sources */,
@@ -572,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -626,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -644,6 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2P9VVU3YH;
 				INFOPLIST_FILE = Geofencing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +660,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2P9VVU3YH;
 				INFOPLIST_FILE = Geofencing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

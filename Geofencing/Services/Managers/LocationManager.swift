@@ -14,11 +14,9 @@ class LocationManager: NSObject {
     
     static var shared = LocationManager()
     
-    let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
     
-    private var lastLocation: CLLocation?
-    
-    override init() {
+    private override init() {
         super.init()
         setUpLocationManager()
     }
@@ -27,8 +25,11 @@ class LocationManager: NSObject {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.startUpdatingLocation()
+    }
+    
+    func requestWhenInUseAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func findCenterOfPlaceAndReturnCircularAreaAroundThatPlace(place: Place) -> CLCircularRegion {
@@ -42,7 +43,7 @@ class LocationManager: NSObject {
         let centerLatitude = sumOfLatitudes / Double(place.coordinates.count)
         let centerLocation = CLLocationCoordinate2D(latitude: centerLatitude, longitude: centerLongitude)
         let regionRadius = findBiggestDistanceFromCenter(center: centerLocation, coordinates: place.coordinates)
-        let circularRegion = CLCircularRegion(center: centerLocation, radius: regionRadius, identifier: "\(place.name)")
+        let circularRegion = CLCircularRegion(center: centerLocation, radius: regionRadius, identifier: UUID().uuidString)
         return circularRegion
     }
     
@@ -73,12 +74,10 @@ class LocationManager: NSObject {
 // MARK: - CLLocationManager delegate
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastLocationCoordinates = locations.last?.coordinate
-             else { return }
-        let placeVisited = findPlaceThatContains(location: lastLocationCoordinates)
-        if placeVisited != findPlaceThatContains(location: lastLocation?.coordinate ?? CLLocationCoordinate2D()) && findPlaceThatContains(location: lastLocation?.coordinate ?? CLLocationCoordinate2D()) == nil {
-            NotificationManager.shared.sendLocationBasedNotification(locationName: placeVisited!.name)
+        guard let lastLocationCoordinates = locations.last?.coordinate else { return }
+        guard let placeVisited = findPlaceThatContains(location: lastLocationCoordinates) else {
+            return
         }
-        lastLocation = locations.last
+        print("💚💚💚\(placeVisited.name)💚💚💚")
     }
 }

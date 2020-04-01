@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = newWindow
         Coordinator.shared.start(newWindow)
         self.window?.makeKeyAndVisible()
-        LocationManager.shared.locationManager.requestWhenInUseAuthorization()
+        LocationManager.shared.requestWhenInUseAuthorization()
         NotificationManager.shared.notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if let error = error {
                 print("Error occured: \(error)")
@@ -27,9 +27,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return true
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        LocationManager.shared.locationManager.startUpdatingLocation()
     }
 }

@@ -15,7 +15,7 @@ class MapViewModel: MapViewModelProtocol {
     
     private let placeNetworking: PlaceNetworkingProtocol
     
-    var placeFetchingResponse = ReplaySubject<[Place]>.create(bufferSize: 1)
+    var placeFetchingResponse = ReplaySubject<PlaceFetchingResponse>.create(bufferSize: 1)
     
     init(placeNetworking: PlaceNetworkingProtocol) {
         self.placeNetworking = placeNetworking

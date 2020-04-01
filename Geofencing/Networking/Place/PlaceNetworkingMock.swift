@@ -12,13 +12,13 @@ import MapKit
 
 class PlaceNetworkingMock: PlaceNetworkingProtocol {
     
-    func fetchAllPlacesFromServer() -> Observable<[Place]> {
+    func fetchAllPlacesFromServer() -> Observable<PlaceFetchingResponse> {
         var placeArray = [Place]()
         placeArray.append(PlaceMock.vivas)
         placeArray.append(PlaceMock.zuza)
         placeArray.append(PlaceMock.dubai)
         
-        return Observable.just(placeArray)
+        return Observable.just(PlaceFetchingResponse.success(placeArray))
     }
 }
 

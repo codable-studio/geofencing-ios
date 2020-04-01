@@ -5,7 +5,6 @@
 //  Created by Krešimir Baković on 16/12/2019.
 //  Copyright © 2019 Krešimir Baković. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
@@ -23,7 +22,8 @@ class Coordinator {
     }
     
     func startMapViewController() {
-        let mapViewModel = MapViewModel()
+        let placeNetworking = PlaceNetworkingMock()
+        let mapViewModel = MapViewModel(placeNetworking: placeNetworking)
         let mapViewController = MapViewController(mapViewModel: mapViewModel)
         let navigationController = UINavigationController(rootViewController: mapViewController)
         window.rootViewController = navigationController

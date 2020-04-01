@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A985FE416B3CD754FBD8851C /* Pods_Geofencing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */; };
+		C1016B4F2434B9970083C81D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1016B4E2434B9970083C81D /* MapViewController.swift */; };
 		C1039096242CCDB500E3A007 /* PlaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039095242CCDB500E3A007 /* PlaceMock.swift */; };
 		C1039098242CCDED00E3A007 /* PlaceNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039097242CCDED00E3A007 /* PlaceNetworking.swift */; };
 		C103909A242CCE3700E3A007 /* PlaceNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */; };
@@ -43,7 +44,6 @@
 		C1F6C419242A0598009D8108 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C405242A0598009D8108 /* UIButton+Rx.swift */; };
 		C1F6C41A242A0598009D8108 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */; };
 		C1F6C41B242A0598009D8108 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C407242A0598009D8108 /* Array+Extension.swift */; };
-		C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C41E242A08CC009D8108 /* MapViewController.swift */; };
 		C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C420242A0933009D8108 /* MapViewModel.swift */; };
 		C1F6C42E242A6389009D8108 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C42B242A6389009D8108 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +52,7 @@
 		4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.release.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.release.xcconfig"; sourceTree = "<group>"; };
 		58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofencing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.debug.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.debug.xcconfig"; sourceTree = "<group>"; };
+		C1016B4E2434B9970083C81D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C1039095242CCDB500E3A007 /* PlaceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMock.swift; sourceTree = "<group>"; };
 		C1039097242CCDED00E3A007 /* PlaceNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworking.swift; sourceTree = "<group>"; };
 		C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		C1F6C405242A0598009D8108 /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		C1F6C406242A0598009D8108 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		C1F6C407242A0598009D8108 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		C1F6C41E242A08CC009D8108 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C1F6C420242A0933009D8108 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		C1F6C42B242A6389009D8108 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C1F6C42F242A78CD009D8108 /* Trcanje po najboljem kvartu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Trcanje po najboljem kvartu.gpx"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		C103909E242CE5D000E3A007 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				C1F6C41E242A08CC009D8108 /* MapViewController.swift */,
+				C1016B4E2434B9970083C81D /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -478,7 +478,6 @@
 				C19C4252242B77FE0086BA46 /* MKPolygon+Extension.swift in Sources */,
 				C19C4263242BA04D0086BA46 /* PlaceNetworkingMock.swift in Sources */,
 				C1F6C412242A0598009D8108 /* UIViewController+Extension.swift in Sources */,
-				C1F6C41F242A08CC009D8108 /* MapViewController.swift in Sources */,
 				C1039096242CCDB500E3A007 /* PlaceMock.swift in Sources */,
 				C19C4266242BB1400086BA46 /* PlaceManager.swift in Sources */,
 				C1F6C40E242A0598009D8108 /* UIButton+Extension.swift in Sources */,
@@ -497,6 +496,7 @@
 				C103909D242CE3E600E3A007 /* MapViewModelProtocol.swift in Sources */,
 				C1F6C413242A0598009D8108 /* UIScreen+Extension.swift in Sources */,
 				C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */,
+				C1016B4F2434B9970083C81D /* MapViewController.swift in Sources */,
 				C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */,
 				C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */,
 				C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */,

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A985FE416B3CD754FBD8851C /* Pods_Geofencing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */; };
-		C1016B4F2434B9970083C81D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1016B4E2434B9970083C81D /* MapViewController.swift */; };
+		C1016B552434BCDB0083C81D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1016B542434BCDB0083C81D /* MapViewController.swift */; };
 		C1039096242CCDB500E3A007 /* PlaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039095242CCDB500E3A007 /* PlaceMock.swift */; };
 		C1039098242CCDED00E3A007 /* PlaceNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039097242CCDED00E3A007 /* PlaceNetworking.swift */; };
 		C103909A242CCE3700E3A007 /* PlaceNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */; };
@@ -52,7 +52,7 @@
 		4B0BBFB971B9CA68F4DA285B /* Pods-Geofencing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.release.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.release.xcconfig"; sourceTree = "<group>"; };
 		58CE4341B00839B3B2ECA491 /* Pods_Geofencing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofencing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B44332DC4256B7DDAE0EBBB /* Pods-Geofencing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencing.debug.xcconfig"; path = "Target Support Files/Pods-Geofencing/Pods-Geofencing.debug.xcconfig"; sourceTree = "<group>"; };
-		C1016B4E2434B9970083C81D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C1016B542434BCDB0083C81D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C1039095242CCDB500E3A007 /* PlaceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMock.swift; sourceTree = "<group>"; };
 		C1039097242CCDED00E3A007 /* PlaceNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworking.swift; sourceTree = "<group>"; };
 		C1039099242CCE3700E3A007 /* PlaceNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		C103909E242CE5D000E3A007 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				C1016B4E2434B9970083C81D /* MapViewController.swift */,
+				C1016B542434BCDB0083C81D /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 				C103909D242CE3E600E3A007 /* MapViewModelProtocol.swift in Sources */,
 				C1F6C413242A0598009D8108 /* UIScreen+Extension.swift in Sources */,
 				C19C4254242B78B30086BA46 /* PlaceServerResponse.swift in Sources */,
-				C1016B4F2434B9970083C81D /* MapViewController.swift in Sources */,
+				C1016B552434BCDB0083C81D /* MapViewController.swift in Sources */,
 				C1F6C3D6242A041D009D8108 /* AppDelegate.swift in Sources */,
 				C1F6C40F242A0598009D8108 /* ObservableType+Extension.swift in Sources */,
 				C1F6C421242A0933009D8108 /* MapViewModel.swift in Sources */,
